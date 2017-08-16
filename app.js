@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+/*
 fs.readdir('./events/', (err, files) => { //this is to check for events AKA ready, guildMemberAdd, guildMemberRemove ..etc
   if (err) return console.error(err);
   files.forEach(file => {
@@ -9,7 +10,7 @@ fs.readdir('./events/', (err, files) => { //this is to check for events AKA read
 
     client.on(eventName, (...args) => eventFunction.run(client, ...args, sql));
   });
-});
+});*///leave commented out until we use events
 
 client.on("message", message => { //this is the command handler -- it checks if there is a command within the commands folder.
   if (message.author.bot) return; //ignores bots
