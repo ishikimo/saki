@@ -34,3 +34,5 @@ client.on("message", message => { //this is the command handler -- it checks if 
     }
   }
 });
+
+client.login(config.token);
