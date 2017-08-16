@@ -25,7 +25,7 @@ client.on("message", message => { //this is the command handler -- it checks if 
 
     try {
       let commandFile = require(`./commands/${command}.js`);
-      commandFile.run(client, message, args, sql, Discord);
+      commandFile.run(client, message, args, Discord);
     } catch (err) {
       console.log(err);
       client.users.get(config.ownerID).send(`${err}`);
