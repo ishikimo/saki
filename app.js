@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require(`./config.json`);
 
 /*
 fs.readdir('./events/', (err, files) => { //this is to check for events AKA ready, guildMemberAdd, guildMemberRemove ..etc
