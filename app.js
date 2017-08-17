@@ -13,6 +13,16 @@ fs.readdir('./events/', (err, files) => { //this is to check for events AKA read
   });
 });*///leave commented out until we use events
 
+client.on('ready', () => {
+  client.user.setGame('Type s!help For Help!')
+	console.log('Saki Is online!')
+})
+
+client.on('disconnect', () => {
+  message.channel.send('Disconnected. Bye bye!');
+  process.exit(1);
+});
+
 client.on("message", message => { //this is the command handler -- it checks if there is a command within the commands folder.
   if (message.author.bot) return; //ignores bots
   if (message.channel.type !== 'text' || message.channel.type === 'dm') return; //ignores dms

@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/ishikimo/saki#readme",
   "dependencies": {
-    "discord.js": "^11.1.0"
+    "bluebird": "^3.5.0",
+    "discord.js": "^11.1.0",
+    "ramda": "^0.24.1"
   }
 }
